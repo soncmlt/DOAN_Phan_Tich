@@ -18,7 +18,7 @@ namespace DEV_PhanTIch
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CapNhatThuoc());
+            Application.Run(new FrmMain());
         }
     }
 }
