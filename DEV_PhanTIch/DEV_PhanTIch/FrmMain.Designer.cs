@@ -168,6 +168,7 @@
             this.barButtonItem7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
             this.barButtonItem7.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
             this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
             // barButtonItem8
             // 
@@ -195,7 +196,7 @@
             // 
             // barButtonItem11
             // 
-            this.barButtonItem11.Caption = "Load";
+            this.barButtonItem11.Caption = "Save";
             this.barButtonItem11.Id = 12;
             this.barButtonItem11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.ImageOptions.Image")));
             this.barButtonItem11.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.ImageOptions.LargeImage")));
@@ -203,11 +204,12 @@
             // 
             // barButtonItem12
             // 
-            this.barButtonItem12.Caption = "Save";
+            this.barButtonItem12.Caption = "Load";
             this.barButtonItem12.Id = 13;
             this.barButtonItem12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
             this.barButtonItem12.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
             this.barButtonItem12.Name = "barButtonItem12";
+            this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick);
             // 
             // barButtonItem13
             // 
@@ -310,7 +312,7 @@
             this.ribbonPageGroup3,
             this.ribbonPageGroup4});
             this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Lập Hóa Đơn Xuất";
+            this.ribbonPage2.Text = "Lập Hóa Đơn Nhập";
             // 
             // ribbonPageGroup3
             // 
@@ -397,7 +399,7 @@
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // CapNhatThuoc
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -405,7 +407,7 @@
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
-            this.Name = "CapNhatThuoc";
+            this.Name = "FrmMain";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "CapNhatThuoc";
