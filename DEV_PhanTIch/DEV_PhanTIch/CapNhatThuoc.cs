@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraBars;
 
-namespace DOAN_Phan_Tich_Thiet_Ke
+namespace DEV_PhanTIch
 {
-    public partial class Form1 : Form
+    public partial class CapNhatThuoc : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public Form1()
+        public CapNhatThuoc()
         {
             InitializeComponent();
-
-            //hello
         }
     }
 }
