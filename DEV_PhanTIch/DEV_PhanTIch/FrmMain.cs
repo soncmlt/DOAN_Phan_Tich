@@ -64,5 +64,12 @@ namespace DEV_PhanTIch
             frm.Name = "Bán Hàng";
             ViewChildForm(frm);
         }
+
+        private void btnLoadNV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_QLNhanVien frm = new frm_QLNhanVien();
+            frm.Name = "Nhân Viên";
+            ViewChildForm(frm);
+        }
     }
 }
