@@ -103,6 +103,7 @@
     <Compile Include="XuLiBanHang.cs" />
     <Compile Include="XuLiKhachHang.cs" />
     <Compile Include="XuLiNhanVien.cs" />
+    <Compile Include="XuLiThuoc.cs" />
     <None Include="DataThuoc.dbml.layout">
       <DependentUpon>DataThuoc.dbml</DependentUpon>
     </None>
