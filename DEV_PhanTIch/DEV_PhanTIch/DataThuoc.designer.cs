@@ -55,7 +55,7 @@ namespace DEV_PhanTIch
     partial void UpdateNhomThuoc(NhomThuoc instance);
     partial void DeleteNhomThuoc(NhomThuoc instance);
     #endregion
-		
+		//
 		public DataThuocDataContext() : 
 				base(global::DEV_PhanTIch.Properties.Settings.Default._QL_NhaThuoc_ConnectionString, mappingSource)
 		{
