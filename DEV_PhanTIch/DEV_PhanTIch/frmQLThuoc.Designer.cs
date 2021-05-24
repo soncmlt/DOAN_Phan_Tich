@@ -30,7 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnNhapLai = new System.Windows.Forms.Button();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtThongTin = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -97,7 +96,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnNhapLai);
-            this.groupBox1.Controls.Add(this.btnTimKiem);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -109,21 +107,12 @@
             // 
             // btnNhapLai
             // 
-            this.btnNhapLai.Location = new System.Drawing.Point(227, 88);
+            this.btnNhapLai.Location = new System.Drawing.Point(227, 43);
             this.btnNhapLai.Name = "btnNhapLai";
-            this.btnNhapLai.Size = new System.Drawing.Size(75, 23);
+            this.btnNhapLai.Size = new System.Drawing.Size(75, 52);
             this.btnNhapLai.TabIndex = 2;
             this.btnNhapLai.Text = "Nhập Lại";
             this.btnNhapLai.UseVisualStyleBackColor = true;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Location = new System.Drawing.Point(227, 37);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
-            this.btnTimKiem.TabIndex = 1;
-            this.btnTimKiem.Text = "Tìm Kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -141,6 +130,7 @@
             this.txtThongTin.Name = "txtThongTin";
             this.txtThongTin.Size = new System.Drawing.Size(192, 21);
             this.txtThongTin.TabIndex = 0;
+            this.txtThongTin.TextChanged += new System.EventHandler(this.txtThongTin_TextChanged);
             // 
             // groupBox2
             // 
@@ -155,6 +145,11 @@
             // cbPhuongThuc
             // 
             this.cbPhuongThuc.FormattingEnabled = true;
+            this.cbPhuongThuc.Items.AddRange(new object[] {
+            "Mã Thuốc",
+            "Tên Thuốc",
+            "Mã Nhóm",
+            "Tên Nhóm"});
             this.cbPhuongThuc.Location = new System.Drawing.Point(6, 18);
             this.cbPhuongThuc.Name = "cbPhuongThuc";
             this.cbPhuongThuc.Size = new System.Drawing.Size(196, 21);
@@ -600,7 +595,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnNhapLai;
-        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cbPhuongThuc;

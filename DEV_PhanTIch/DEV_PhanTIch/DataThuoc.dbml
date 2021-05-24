@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="&quot;QL_NhaThuoc&quot;" Class="DataThuocDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-IU1FU46\SQLEXPRESS;Initial Catalog='&quot;QL_NhaThuoc&quot;';Integrated Security=True" SettingsObjectName="DEV_PhanTIch.Properties.Settings" SettingsPropertyName="_QL_NhaThuoc_ConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-6F26VA1\SQLEXPRESS;Initial Catalog='&quot;QL_NhaThuoc&quot;';Integrated Security=True" SettingsObjectName="DEV_PhanTIch.Properties.Settings" SettingsPropertyName="_QL_NhaThuoc_ConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CTHoaDonNhap" Member="CTHoaDonNhaps">
     <Type Name="CTHoaDonNhap">
       <Column Name="maHD_Nhap" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
