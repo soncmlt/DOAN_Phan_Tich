@@ -39,7 +39,7 @@ namespace DEV_PhanTIch
             try
             {
                 xl.themHoaDon(txt_MaHD.Text, txt_MaNV.Text, txt_MaKH.Text, dateTimePicker1.Value,int.Parse( txt_TongTien.Text));
-                MessageBox.Show("Lưu thành công");
+                
             }
             catch
             {
