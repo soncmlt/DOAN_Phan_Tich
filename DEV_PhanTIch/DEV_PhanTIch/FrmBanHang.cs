@@ -33,5 +33,18 @@ namespace DEV_PhanTIch
         {
             dgv_KetQua.DataSource = xl.loadThuoc(txt_TimKiem.Text);
         }
+
+        private void btn_Luu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                xl.themHoaDon(txt_MaHD.Text, txt_MaNV.Text, txt_MaKH.Text, dateTimePicker1.Value,int.Parse( txt_TongTien.Text));
+                MessageBox.Show("Lưu thành công");
+            }
+            catch
+            {
+                MessageBox.Show("ERROR");
+            }
+        }
     }
 }

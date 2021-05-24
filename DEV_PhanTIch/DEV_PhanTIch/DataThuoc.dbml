@@ -63,7 +63,7 @@
     <Type Name="KhachHang">
       <Column Name="maKH" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ho_ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="gioi_tinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="gioi_tinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="tuoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="soDT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="diem" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -74,13 +74,12 @@
     <Type Name="NhanVien">
       <Column Name="maNV" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ho_ten" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="gioi_tinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="gioi_tinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="tuoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="dai_chi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="soDT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="chuc_vu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="phan_quyen" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="ten_DN" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="matkhau" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Association Name="NhanVien_HoaDonNhap" Member="HoaDonNhaps" ThisKey="maNV" OtherKey="maNV" Type="HoaDonNhap" />
