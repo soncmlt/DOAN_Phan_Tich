@@ -38,6 +38,9 @@
             this.dgv_KetQua = new System.Windows.Forms.DataGridView();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.dgv_CTDT = new System.Windows.Forms.DataGridView();
+            this.MaThuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_TongTien = new DevExpress.XtraEditors.TextEdit();
@@ -55,9 +58,6 @@
             this.btn_HuyHD = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Luu = new DevExpress.XtraEditors.SimpleButton();
             this.cbo_TimKiem = new System.Windows.Forms.ComboBox();
-            this.MaThuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TimKiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -169,6 +169,21 @@
             this.dgv_CTDT.Name = "dgv_CTDT";
             this.dgv_CTDT.Size = new System.Drawing.Size(330, 102);
             this.dgv_CTDT.TabIndex = 0;
+            // 
+            // MaThuoc
+            // 
+            this.MaThuoc.HeaderText = "Mã thuốc";
+            this.MaThuoc.Name = "MaThuoc";
+            // 
+            // GiaBan
+            // 
+            this.GiaBan.HeaderText = "Giá bán";
+            this.GiaBan.Name = "GiaBan";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
             // 
             // groupControl3
             // 
@@ -315,21 +330,6 @@
             this.cbo_TimKiem.Name = "cbo_TimKiem";
             this.cbo_TimKiem.Size = new System.Drawing.Size(168, 21);
             this.cbo_TimKiem.TabIndex = 15;
-            // 
-            // MaThuoc
-            // 
-            this.MaThuoc.HeaderText = "Mã thuốc";
-            this.MaThuoc.Name = "MaThuoc";
-            // 
-            // GiaBan
-            // 
-            this.GiaBan.HeaderText = "Giá bán";
-            this.GiaBan.Name = "GiaBan";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
             // 
             // simpleButton1
             // 
