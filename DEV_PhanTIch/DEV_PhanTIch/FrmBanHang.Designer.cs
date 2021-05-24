@@ -38,23 +38,23 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dgv_KetQua = new System.Windows.Forms.DataGridView();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.txt_TongTien = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_NgayXuat = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_MaKH = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_MaNV = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_MaHD = new DevExpress.XtraEditors.TextEdit();
             this.btn_ThemThuoc = new DevExpress.XtraEditors.SimpleButton();
             this.btn_XoaThuoc = new DevExpress.XtraEditors.SimpleButton();
             this.btn_HuyThuoc = new DevExpress.XtraEditors.SimpleButton();
             this.btn_HuyHD = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Luu = new DevExpress.XtraEditors.SimpleButton();
-            this.txt_MaHD = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_MaNV = new DevExpress.XtraEditors.TextEdit();
-            this.txt_MaKH = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_NgayXuat = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_TongTien = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_TimKiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TimKiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -62,14 +62,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KetQua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_MaHD.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_MaNV.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_MaKH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_NgayXuat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TongTien.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_NgayXuat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaKH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaNV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaHD.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -162,6 +162,15 @@
             this.groupControl2.TabIndex = 8;
             this.groupControl2.Text = "Chi tiết đơn thuốc";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(2, 23);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(330, 102);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // groupControl3
             // 
             this.groupControl3.Controls.Add(this.txt_TongTien);
@@ -179,6 +188,82 @@
             this.groupControl3.Size = new System.Drawing.Size(334, 156);
             this.groupControl3.TabIndex = 9;
             this.groupControl3.Text = "Hóa đơn";
+            // 
+            // txt_TongTien
+            // 
+            this.txt_TongTien.Location = new System.Drawing.Point(82, 130);
+            this.txt_TongTien.Name = "txt_TongTien";
+            this.txt_TongTien.Size = new System.Drawing.Size(247, 20);
+            this.txt_TongTien.TabIndex = 18;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(31, 133);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(45, 13);
+            this.labelControl9.TabIndex = 17;
+            this.labelControl9.Text = "Tổng tiền";
+            // 
+            // txt_NgayXuat
+            // 
+            this.txt_NgayXuat.Location = new System.Drawing.Point(82, 104);
+            this.txt_NgayXuat.Name = "txt_NgayXuat";
+            this.txt_NgayXuat.Size = new System.Drawing.Size(247, 20);
+            this.txt_NgayXuat.TabIndex = 16;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(26, 107);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(50, 13);
+            this.labelControl8.TabIndex = 15;
+            this.labelControl8.Text = "Ngày xuất";
+            // 
+            // txt_MaKH
+            // 
+            this.txt_MaKH.EditValue = "";
+            this.txt_MaKH.Location = new System.Drawing.Point(82, 78);
+            this.txt_MaKH.Name = "txt_MaKH";
+            this.txt_MaKH.Size = new System.Drawing.Size(247, 20);
+            this.txt_MaKH.TabIndex = 5;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(4, 81);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(72, 13);
+            this.labelControl7.TabIndex = 4;
+            this.labelControl7.Text = "Mã khách hàng";
+            // 
+            // txt_MaNV
+            // 
+            this.txt_MaNV.Location = new System.Drawing.Point(82, 52);
+            this.txt_MaNV.Name = "txt_MaNV";
+            this.txt_MaNV.Size = new System.Drawing.Size(247, 20);
+            this.txt_MaNV.TabIndex = 3;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(12, 55);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(64, 13);
+            this.labelControl6.TabIndex = 2;
+            this.labelControl6.Text = "Mã nhân viên";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(20, 29);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(56, 13);
+            this.labelControl5.TabIndex = 1;
+            this.labelControl5.Text = "Mã hóa đơn";
+            // 
+            // txt_MaHD
+            // 
+            this.txt_MaHD.Location = new System.Drawing.Point(82, 26);
+            this.txt_MaHD.Name = "txt_MaHD";
+            this.txt_MaHD.Size = new System.Drawing.Size(247, 20);
+            this.txt_MaHD.TabIndex = 0;
             // 
             // btn_ThemThuoc
             // 
@@ -220,91 +305,6 @@
             this.btn_Luu.TabIndex = 13;
             this.btn_Luu.Text = "Lưu";
             // 
-            // txt_MaHD
-            // 
-            this.txt_MaHD.Location = new System.Drawing.Point(82, 26);
-            this.txt_MaHD.Name = "txt_MaHD";
-            this.txt_MaHD.Size = new System.Drawing.Size(247, 20);
-            this.txt_MaHD.TabIndex = 0;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(20, 29);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(56, 13);
-            this.labelControl5.TabIndex = 1;
-            this.labelControl5.Text = "Mã hóa đơn";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(12, 55);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(64, 13);
-            this.labelControl6.TabIndex = 2;
-            this.labelControl6.Text = "Mã nhân viên";
-            // 
-            // txt_MaNV
-            // 
-            this.txt_MaNV.Location = new System.Drawing.Point(82, 52);
-            this.txt_MaNV.Name = "txt_MaNV";
-            this.txt_MaNV.Size = new System.Drawing.Size(247, 20);
-            this.txt_MaNV.TabIndex = 3;
-            // 
-            // txt_MaKH
-            // 
-            this.txt_MaKH.EditValue = "";
-            this.txt_MaKH.Location = new System.Drawing.Point(82, 78);
-            this.txt_MaKH.Name = "txt_MaKH";
-            this.txt_MaKH.Size = new System.Drawing.Size(247, 20);
-            this.txt_MaKH.TabIndex = 5;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(4, 81);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(72, 13);
-            this.labelControl7.TabIndex = 4;
-            this.labelControl7.Text = "Mã khách hàng";
-            // 
-            // txt_NgayXuat
-            // 
-            this.txt_NgayXuat.Location = new System.Drawing.Point(82, 104);
-            this.txt_NgayXuat.Name = "txt_NgayXuat";
-            this.txt_NgayXuat.Size = new System.Drawing.Size(247, 20);
-            this.txt_NgayXuat.TabIndex = 16;
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Location = new System.Drawing.Point(26, 107);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(50, 13);
-            this.labelControl8.TabIndex = 15;
-            this.labelControl8.Text = "Ngày xuất";
-            // 
-            // txt_TongTien
-            // 
-            this.txt_TongTien.Location = new System.Drawing.Point(82, 130);
-            this.txt_TongTien.Name = "txt_TongTien";
-            this.txt_TongTien.Size = new System.Drawing.Size(247, 20);
-            this.txt_TongTien.TabIndex = 18;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Location = new System.Drawing.Point(31, 133);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(45, 13);
-            this.labelControl9.TabIndex = 17;
-            this.labelControl9.Text = "Tổng tiền";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(330, 102);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // FrmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,6 +327,7 @@
             this.Controls.Add(this.labelControl1);
             this.Name = "FrmBanHang";
             this.Text = "Thêm thuốc";
+            this.Load += new System.EventHandler(this.FrmBanHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cbo_TimKiem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TimKiem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -334,15 +335,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KetQua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_MaHD.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_MaNV.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_MaKH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_NgayXuat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TongTien.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_NgayXuat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaKH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaNV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaHD.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
