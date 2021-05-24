@@ -84,6 +84,7 @@
             this.gridDSKH.Name = "gridDSKH";
             this.gridDSKH.Size = new System.Drawing.Size(644, 237);
             this.gridDSKH.TabIndex = 0;
+            this.gridDSKH.SelectionChanged += new System.EventHandler(this.gridDSKH_SelectionChanged);
             // 
             // maNV
             // 
@@ -253,6 +254,7 @@
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -262,6 +264,7 @@
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
