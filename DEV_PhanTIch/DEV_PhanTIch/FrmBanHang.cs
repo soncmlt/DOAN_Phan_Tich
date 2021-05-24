@@ -56,7 +56,7 @@ namespace DEV_PhanTIch
             {              
                 txt_TongTien.Text = xl.tinhTongTien(dgv_CTDT).ToString();
                 xl.themHoaDon(txt_MaHD.Text, txt_MaNV.Text, txt_MaKH.Text, dateTimePicker1.Value, int.Parse(txt_TongTien.Text));
-
+                MessageBox.Show("Lưu thành công");
             }
             catch
             {
@@ -122,6 +122,7 @@ namespace DEV_PhanTIch
             try
             { 
             xl.themCTHoaDon(dgv_CTDT, txt_MaHD.Text);
+                MessageBox.Show("Xuất hóa đơn thành công");
             }
             catch
             {

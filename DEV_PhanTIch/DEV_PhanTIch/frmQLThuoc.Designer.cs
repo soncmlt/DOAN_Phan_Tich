@@ -395,10 +395,9 @@
             this.gridDsThuoc.Name = "gridDsThuoc";
             this.gridDsThuoc.Size = new System.Drawing.Size(709, 340);
             this.gridDsThuoc.TabIndex = 1;
-<<<<<<< HEAD
-=======
+
             this.gridDsThuoc.SelectionChanged += new System.EventHandler(this.gridDsThuoc_SelectionChanged);
->>>>>>> c98fb80c62c3ddb36489d5a1b348819f75c45f9f
+
             // 
             // dataGridViewTextBoxColumn1
             // 

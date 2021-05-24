@@ -318,7 +318,7 @@
             // 
             this.btn_Luu.Location = new System.Drawing.Point(692, 275);
             this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(75, 50);
+            this.btn_Luu.Size = new System.Drawing.Size(75, 46);
             this.btn_Luu.TabIndex = 13;
             this.btn_Luu.Text = "Lưu";
             this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
@@ -335,7 +335,7 @@
             // 
             this.simpleButton1.Location = new System.Drawing.Point(692, 227);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(75, 46);
             this.simpleButton1.TabIndex = 16;
             this.simpleButton1.Text = "Lưu chi tiết";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);

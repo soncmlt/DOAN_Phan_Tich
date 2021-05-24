@@ -16,17 +16,17 @@ namespace DEV_PhanTIch
             return data.Thuocs.Select(t => t);
         }
 
-<<<<<<< HEAD
+
         public IQueryable<Thuoc> timKiem(String pvalues, String pinfo)
         {
             if (pvalues == "Mã Thuốc")
                 return data.Thuocs.Select(t => t).Where(t => t.ma_thuoc == "% " + pinfo + " %");
-            else if(pvalues == "Tên Thuốc")
+            else if (pvalues == "Tên Thuốc")
                 return data.Thuocs.Select(t => t).Where(t => t.ten_thuoc == "% " + pinfo + " %");
             else
                 return data.Thuocs.Select(t => t).Where(t => t.ma_nhom == "% " + pinfo + " %");
 
-=======
+        }
         public IQueryable<NhomThuoc> loadNhomThuoc()
         {
             return data.NhomThuocs.Select(t => t);
@@ -96,7 +96,6 @@ namespace DEV_PhanTIch
         public void Luu()
         {
             data.SubmitChanges();
->>>>>>> c98fb80c62c3ddb36489d5a1b348819f75c45f9f
         }
     }
 }

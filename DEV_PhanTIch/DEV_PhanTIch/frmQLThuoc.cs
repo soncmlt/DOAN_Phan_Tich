@@ -46,9 +46,7 @@ namespace DEV_PhanTIch
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
 
-=======
             if (thuoc.themThuoc(txtMaThuoc.Text, txtTenThuoc.Text, cbMaNhomThuoc.SelectedValue.ToString(), txtCongDung.Text, txtThanhPhan.Text, cbDVT.SelectedItem.ToString(), txtXuatSu.Text, int.Parse(txtGiaBan.Text), int.Parse(txtSoLuong.Text)))
             {
                 MessageBox.Show("Thêm Thuốc Thành Công");
@@ -111,7 +109,7 @@ namespace DEV_PhanTIch
             txtXuatSu.Text = gridKQTK.CurrentRow.Cells[6].Value.ToString();
             //txtGiaBan.Text = gridKQTK.CurrentRow.Cells[7].Value.ToString();
             txtSoLuong.Text = gridKQTK.CurrentRow.Cells[8].Value.ToString();
->>>>>>> c98fb80c62c3ddb36489d5a1b348819f75c45f9f
+
         }
     }
 }
