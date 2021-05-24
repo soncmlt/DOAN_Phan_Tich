@@ -49,7 +49,6 @@ create table Thuoc
 	constraint FK_Thuoc_NhomThuoc foreign key (ma_nhom) references NhomThuoc(ma_nhom)
 )
 
-
 create table HoaDonNhap
 (
 	maHD_Nhap nvarchar(10) not null,
@@ -95,3 +94,8 @@ create table CTHoaDonXuat
 	constraint FK_CTHoaDonXuat_Thuoc FOREIGN KEY (ma_thuoc) REFERENCES Thuoc(ma_thuoc),
 	constraint FK_CTHoaDonXuat_HoaDonXuat FOREIGN KEY (maHD_Xuat) REFERENCES HoaDonXuat(maHD_Xuat)
 )
+
+
+insert into NhanVien values('NV001',N'Nnguyễn Văn A',N'Nam',32,N'1 Trường Chinh',N'ABC@gmail.com','0123456789',N'Nhân Viên',N'abc',N'123')
+insert into KhachHang values('0123456789',N'Nguyễn văn B',N'Nam',20,'0123456789',1)
+
