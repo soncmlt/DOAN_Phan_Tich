@@ -17,5 +17,10 @@ namespace DEV_PhanTIch
         {
             InitializeComponent();
         }
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
