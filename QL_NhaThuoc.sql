@@ -95,7 +95,16 @@ create table CTHoaDonXuat
 	constraint FK_CTHoaDonXuat_HoaDonXuat FOREIGN KEY (maHD_Xuat) REFERENCES HoaDonXuat(maHD_Xuat)
 )
 
-
+select * from thuoc
 insert into NhanVien values('NV001',N'Nnguyễn Văn A',N'Nam',32,N'1 Trường Chinh',N'ABC@gmail.com','0123456789',N'Nhân Viên',N'abc',N'123')
 insert into KhachHang values('0123456789',N'Nguyễn văn B',N'Nam',20,'0123456789',1)
 
+insert into HoaDonNhap values('HDN001','NV001',2020/1/1,N'Nhà Cung cấp 1',1000000)
+insert into HoaDonNhap values('HDN111','NV001',2020/1/1,N'Nhà Cung cấp 1',1000000)
+insert into HoaDonNhap values('HDN231','NV001',2020/1/1,N'Nhà Cung cấp 1',1000000)
+insert into HoaDonNhap values('HDN461','NV001',2020/1/1,N'Nhà Cung cấp 1',1000000)
+insert into HoaDonNhap values('HDN981','NV001',2020/1/1,N'Nhà Cung cấp 1',1000000)
+insert into HoaDonNhap values('HDN121','NV001',2020/1/1,N'Nhà Cung cấp 1',1000000)
+insert into HoaDonNhap values('HDN451','NV001',2020/1/1,N'Nhà Cung cấp 1',1000000)
+insert into HoaDonNhap values('HDN541','NV001',2020/1/1,N'Nhà Cung cấp 1',1000000)
+insert into HoaDonNhap values('HDN441','NV001',2020/1/1,N'Nhà Cung cấp 1',1000000)
