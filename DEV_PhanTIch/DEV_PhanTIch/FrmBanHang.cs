@@ -21,12 +21,17 @@ namespace DEV_PhanTIch
         
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            
+            loadGridThuoc();
         }
 
         private void FrmBanHang_Load(object sender, EventArgs e)
         {
             dgv_KetQua.DataSource = xl.loadThuoc();
+        }
+
+        public void loadGridThuoc()
+        {
+            dgv_KetQua.DataSource = xl.loadThuoc(txt_TimKiem.Text);
         }
     }
 }
