@@ -27,5 +27,32 @@ namespace DEV_PhanTIch
             else
                 MessageBox.Show("Nhân Viên này đã tồn tại hoặc bạn nhập sai định dạng");
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (nv.editNV(txtmaNV.Text, txtHoTen.Text, cbgioitinh.SelectedItem.ToString(), int.Parse(txtTuoi.Text), txtDiaChi.Text, cbChucVu.SelectedItem.ToString(),txtEmail.Text, txtSDT.Text) == true)
+            {
+                MessageBox.Show("Sửa Nhân Viên Thành Công");
+                gridDSNV.DataSource = nv.loadNV();
+            }
+            else
+                MessageBox.Show("Sửa Thất Bại");
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (nv.deleteNV(txtmaNV.Text))
+            {
+                MessageBox.Show("Xóa Nhân Viên Thành Công");
+                gridDSNV.DataSource = nv.loadNV();
+            }
+            else
+                MessageBox.Show("Xóa Thất Bại");
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            nv.Luu();
+        }
     }
 }
