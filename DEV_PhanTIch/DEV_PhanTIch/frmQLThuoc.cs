@@ -106,7 +106,7 @@ namespace DEV_PhanTIch
             txtThanhPhan.Text = gridKQTK.CurrentRow.Cells[4].Value.ToString();
             cbDVT.Text = gridKQTK.CurrentRow.Cells[5].Value.ToString();
             txtXuatSu.Text = gridKQTK.CurrentRow.Cells[6].Value.ToString();
-            txtGiaBan.Text = gridKQTK.CurrentRow.Cells[7].Value.ToString();
+            //txtGiaBan.Text = gridKQTK.CurrentRow.Cells[7].Value.ToString();
             txtSoLuong.Text = gridKQTK.CurrentRow.Cells[8].Value.ToString();
         }
     }
