@@ -183,6 +183,7 @@
             this.gridKQTK.Name = "gridKQTK";
             this.gridKQTK.Size = new System.Drawing.Size(709, 111);
             this.gridKQTK.TabIndex = 0;
+            this.gridKQTK.SelectionChanged += new System.EventHandler(this.gridKQTK_SelectionChanged);
             // 
             // Column1
             // 
@@ -339,6 +340,7 @@
             this.gridDsThuoc.Name = "gridDsThuoc";
             this.gridDsThuoc.Size = new System.Drawing.Size(709, 340);
             this.gridDsThuoc.TabIndex = 1;
+            this.gridDsThuoc.SelectionChanged += new System.EventHandler(this.gridDsThuoc_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 

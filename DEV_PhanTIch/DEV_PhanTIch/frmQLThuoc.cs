@@ -83,5 +83,31 @@ namespace DEV_PhanTIch
             thuoc.Luu();
             gridDsThuoc.DataSource = thuoc.loadThuoc();
         }
+
+        private void gridDsThuoc_SelectionChanged(object sender, EventArgs e)
+        {
+            txtMaThuoc.Text = gridDsThuoc.CurrentRow.Cells[0].Value.ToString();
+            txtTenThuoc.Text = gridDsThuoc.CurrentRow.Cells[1].Value.ToString();
+            cbMaNhomThuoc.Text = gridDsThuoc.CurrentRow.Cells[2].Value.ToString();
+            txtCongDung.Text = gridDsThuoc.CurrentRow.Cells[3].Value.ToString();
+            txtThanhPhan.Text = gridDsThuoc.CurrentRow.Cells[4].Value.ToString();
+            cbDVT.Text = gridDsThuoc.CurrentRow.Cells[5].Value.ToString();
+            txtXuatSu.Text = gridDsThuoc.CurrentRow.Cells[6].Value.ToString();
+            //txtGiaBan.Text = gridDsThuoc.CurrentRow.Cells[7].Value.ToString();
+            txtSoLuong.Text = gridDsThuoc.CurrentRow.Cells[8].Value.ToString();
+        }
+
+        private void gridKQTK_SelectionChanged(object sender, EventArgs e)
+        {
+            txtMaThuoc.Text = gridKQTK.CurrentRow.Cells[0].Value.ToString();
+            txtTenThuoc.Text = gridKQTK.CurrentRow.Cells[1].Value.ToString();
+            cbMaNhomThuoc.Text = gridKQTK.CurrentRow.Cells[2].Value.ToString();
+            txtCongDung.Text = gridKQTK.CurrentRow.Cells[3].Value.ToString();
+            txtThanhPhan.Text = gridKQTK.CurrentRow.Cells[4].Value.ToString();
+            cbDVT.Text = gridKQTK.CurrentRow.Cells[5].Value.ToString();
+            txtXuatSu.Text = gridKQTK.CurrentRow.Cells[6].Value.ToString();
+            txtGiaBan.Text = gridKQTK.CurrentRow.Cells[7].Value.ToString();
+            txtSoLuong.Text = gridKQTK.CurrentRow.Cells[8].Value.ToString();
+        }
     }
 }

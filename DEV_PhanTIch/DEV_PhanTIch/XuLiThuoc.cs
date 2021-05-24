@@ -25,7 +25,7 @@ namespace DEV_PhanTIch
         //Kiem Tra Thuoc
         public bool ktrThuoc(String pmathuoc)
         {
-            if (data.Thuocs.Select(t => t).Where(t => t.ma_thuoc == pmathuoc).Count() > 4)
+            if (data.Thuocs.Select(t => t).Where(t => t.ma_thuoc == pmathuoc).Count() > 0)
                 return false;
             return true;
         }
@@ -73,7 +73,7 @@ namespace DEV_PhanTIch
 
         public bool deleteThuoc(String pmathuoc)
         {
-            if (!ktrThuoc(pmathuoc))
+            if (ktrThuoc(pmathuoc) == false)
             {
                 Thuoc thuoc = data.Thuocs.Where(t => t.ma_thuoc == pmathuoc).Single();
                 thuoc.ma_thuoc = pmathuoc;
