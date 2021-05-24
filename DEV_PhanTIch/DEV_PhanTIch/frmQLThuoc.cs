@@ -23,6 +23,9 @@ namespace DEV_PhanTIch
         private void frmQLThuoc_Load(object sender, EventArgs e)
         {
             gridDsThuoc.DataSource = thuoc.loadThuoc();
+            cbMaNhomThuoc.DataSource = thuoc.loadNhomThuoc();
+            cbMaNhomThuoc.DisplayMember = "ten_nhom";
+            cbMaNhomThuoc.ValueMember = "ma_nhom";
         }
         private void txtThongTin_TextChanged(object sender, EventArgs e)
         {
@@ -39,6 +42,46 @@ namespace DEV_PhanTIch
         private void btnNhapLai_Click(object sender, EventArgs e)
         {
             txtThongTin.Clear();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (thuoc.themThuoc(txtMaThuoc.Text, txtTenThuoc.Text, cbMaNhomThuoc.SelectedValue.ToString(), txtCongDung.Text, txtThanhPhan.Text, cbDVT.SelectedItem.ToString(), txtXuatSu.Text, int.Parse(txtGiaBan.Text), int.Parse(txtSoLuong.Text)))
+            {
+                MessageBox.Show("Thêm Thuốc Thành Công");
+
+            }
+            else
+                MessageBox.Show("Thêm Thuốc Thất Bại");
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (thuoc.edtiThuoc(txtMaThuoc.Text, txtTenThuoc.Text, cbMaNhomThuoc.SelectedValue.ToString(), txtCongDung.Text, txtThanhPhan.Text, cbDVT.SelectedItem.ToString(), txtXuatSu.Text, int.Parse(txtGiaBan.Text), int.Parse(txtSoLuong.Text)))
+            {
+                MessageBox.Show("Sửa Thuốc Thành Công");
+
+            }
+            else
+                MessageBox.Show("Sửa Thuốc Thất Bại");
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (thuoc.deleteThuoc(txtMaThuoc.Text))
+            {
+                MessageBox.Show("Xóa Thuốc Thành Công");
+
+            }
+            else
+                MessageBox.Show("Xóa Thuốc Thất Bại");
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Lưu Thành Công");
+            thuoc.Luu();
+            gridDsThuoc.DataSource = thuoc.loadThuoc();
         }
     }
 }
