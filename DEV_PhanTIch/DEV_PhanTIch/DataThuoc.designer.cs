@@ -57,7 +57,7 @@ namespace DEV_PhanTIch
     #endregion
 		
 		public DataThuocDataContext() : 
-				base(global::DEV_PhanTIch.Properties.Settings.Default._QL_NhaThuoc_ConnectionString, mappingSource)
+				base(global::DEV_PhanTIch.Properties.Settings.Default._QL_NhaThuoc_ConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1439,7 +1439,7 @@ namespace DEV_PhanTIch
 		
 		private string _ho_ten;
 		
-		private System.Nullable<bool> _gioi_tinh;
+		private string _gioi_tinh;
 		
 		private System.Nullable<int> _tuoi;
 		
@@ -1457,7 +1457,7 @@ namespace DEV_PhanTIch
     partial void OnmaKHChanged();
     partial void Onho_tenChanging(string value);
     partial void Onho_tenChanged();
-    partial void Ongioi_tinhChanging(System.Nullable<bool> value);
+    partial void Ongioi_tinhChanging(string value);
     partial void Ongioi_tinhChanged();
     partial void OntuoiChanging(System.Nullable<int> value);
     partial void OntuoiChanged();
@@ -1513,8 +1513,8 @@ namespace DEV_PhanTIch
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gioi_tinh", DbType="Bit")]
-		public System.Nullable<bool> gioi_tinh
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gioi_tinh", DbType="NVarChar(10)")]
+		public string gioi_tinh
 		{
 			get
 			{

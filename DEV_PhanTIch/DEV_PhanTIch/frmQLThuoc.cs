@@ -13,9 +13,15 @@ namespace DEV_PhanTIch
 {
     public partial class frmQLThuoc : DevExpress.XtraEditors.XtraForm
     {
+        XuLiThuoc thuoc = new XuLiThuoc();
         public frmQLThuoc()
         {
             InitializeComponent();
+        }
+
+        private void frmQLThuoc_Load(object sender, EventArgs e)
+        {
+            gridDsThuoc.DataSource = thuoc.loadThuoc();
         }
     }
 }
