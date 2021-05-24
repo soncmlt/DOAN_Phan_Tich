@@ -30,7 +30,6 @@
         {
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.cbo_TimKiem = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txt_TimKiem = new DevExpress.XtraEditors.TextEdit();
@@ -40,6 +39,7 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_TongTien = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
@@ -54,8 +54,7 @@
             this.btn_HuyThuoc = new DevExpress.XtraEditors.SimpleButton();
             this.btn_HuyHD = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Luu = new DevExpress.XtraEditors.SimpleButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_TimKiem.Properties)).BeginInit();
+            this.cbo_TimKiem = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TimKiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -92,15 +91,6 @@
             this.labelControl2.Size = new System.Drawing.Size(67, 19);
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "Tìm kiếm";
-            // 
-            // cbo_TimKiem
-            // 
-            this.cbo_TimKiem.Location = new System.Drawing.Point(176, 69);
-            this.cbo_TimKiem.Name = "cbo_TimKiem";
-            this.cbo_TimKiem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbo_TimKiem.Size = new System.Drawing.Size(170, 20);
-            this.cbo_TimKiem.TabIndex = 2;
             // 
             // labelControl3
             // 
@@ -187,6 +177,13 @@
             this.groupControl3.Size = new System.Drawing.Size(334, 156);
             this.groupControl3.TabIndex = 9;
             this.groupControl3.Text = "Hóa đơn";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(83, 105);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(246, 21);
+            this.dateTimePicker1.TabIndex = 19;
             // 
             // txt_TongTien
             // 
@@ -298,18 +295,20 @@
             this.btn_Luu.Text = "Lưu";
             this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
-            // dateTimePicker1
+            // cbo_TimKiem
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(83, 105);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(246, 21);
-            this.dateTimePicker1.TabIndex = 19;
+            this.cbo_TimKiem.FormattingEnabled = true;
+            this.cbo_TimKiem.Location = new System.Drawing.Point(176, 69);
+            this.cbo_TimKiem.Name = "cbo_TimKiem";
+            this.cbo_TimKiem.Size = new System.Drawing.Size(168, 21);
+            this.cbo_TimKiem.TabIndex = 15;
             // 
             // FrmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 390);
+            this.Controls.Add(this.cbo_TimKiem);
             this.Controls.Add(this.btn_HuyHD);
             this.Controls.Add(this.btn_Luu);
             this.Controls.Add(this.btn_HuyThuoc);
@@ -322,13 +321,11 @@
             this.Controls.Add(this.txt_TimKiem);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.cbo_TimKiem);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Name = "FrmBanHang";
             this.Text = "Thêm thuốc";
             this.Load += new System.EventHandler(this.FrmBanHang_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_TimKiem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TimKiem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -352,7 +349,6 @@
 
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.ComboBoxEdit cbo_TimKiem;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txt_TimKiem;
@@ -377,5 +373,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cbo_TimKiem;
     }
 }
