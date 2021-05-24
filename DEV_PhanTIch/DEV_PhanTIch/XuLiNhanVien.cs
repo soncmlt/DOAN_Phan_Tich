@@ -25,7 +25,7 @@ namespace DEV_PhanTIch
         }
 
         //Hàm Thêm Nhân Viên  - Sơn
-        public bool ThemNV(String pmaNV, String phoTen, String pgioitinh, int ptuoi, String pdiaChi, String pchucvu,String pSDT)
+        public bool ThemNV(String pmaNV, String phoTen, String pgioitinh, int ptuoi, String pdiaChi, String pchucvu, String pSDT)
         {
             if (ktraNV(pmaNV))
             {
@@ -39,11 +39,11 @@ namespace DEV_PhanTIch
                     chuc_vu = pchucvu,
                     ten_DN = pmaNV,
                     matkhau = pSDT,
-                    soDT =pSDT,
+                    soDT = pSDT,
                     email = "",
                 };
                 data.NhanViens.InsertOnSubmit(nv);
-                data.SubmitChanges();
+                //data.SubmitChanges();
                 loadNV();
                 return true;
             }
@@ -52,31 +52,46 @@ namespace DEV_PhanTIch
         }
 
         //Hàm Sửa Thông Tin Nhân Viên
-        public void editNV(String pmaNV, String phoTen, String pgioitinh, int ptuoi, String pdiaChi, string pchucvu, String pEmail, String pSDT)
+        public bool editNV(String pmaNV, String phoTen, String pgioitinh, int ptuoi, String pdiaChi, string pchucvu, String pEmail, String pSDT)
         {
-            NhanVien nv = data.NhanViens.Where(t => t.maNV == pmaNV).Single();
-            nv.maNV = pmaNV;
-            nv.ho_ten = phoTen;
-            nv.gioi_tinh = pgioitinh;
-            nv.tuoi = ptuoi;
-            nv.dia_chi = pdiaChi;
-            nv.chuc_vu = pchucvu;
-            nv.ten_DN = pmaNV;
-            nv.matkhau = pSDT;
-            nv.soDT = pSDT;
-            nv.email = pEmail;
-            data.SubmitChanges();
+            if (ktraNV(pmaNV) == false)
+            {
+                NhanVien nv = data.NhanViens.Where(t => t.maNV == pmaNV).Single();
+                nv.maNV = pmaNV;
+                nv.ho_ten = phoTen;
+                nv.gioi_tinh = pgioitinh;
+                nv.tuoi = ptuoi;
+                nv.dia_chi = pdiaChi;
+                nv.chuc_vu = pchucvu;
+                nv.ten_DN = pmaNV;
+                nv.matkhau = pSDT;
+                nv.soDT = pSDT;
+                nv.email = pEmail;
+                //data.SubmitChanges();
+                return true;
+            }
+            return false;
         }
 
         //Hàm Xóa Nhân Viên - Sơn
-        public void deleteNV(String pmaNV)
+        public bool deleteNV(String pmaNV)
         {
-            NhanVien nv = data.NhanViens.Where(t => t.maNV == pmaNV).Single();
-            nv.maNV = pmaNV;
-            data.NhanViens.DeleteOnSubmit(nv);
-            data.SubmitChanges();
+            if (ktraNV(pmaNV) == false)
+            {
+                NhanVien nv = data.NhanViens.Where(t => t.maNV == pmaNV).Single();
+                nv.maNV = pmaNV;
+                data.NhanViens.DeleteOnSubmit(nv);
+                //data.SubmitChanges();
+                return true;
+            }
+            return false;
         }
 
+
+        public void Luu()
+        {
+            data.SubmitChanges();
+        }
 
     }
 }
