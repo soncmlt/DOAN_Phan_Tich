@@ -13,8 +13,11 @@ namespace DEV_PhanTIch
         DataThuocDataContext data = new DataThuocDataContext();
         public IQueryable<Thuoc> loadThuoc()
         {
-
             return data.Thuocs.Select(t => t);
+        }
+        public IQueryable<Thuoc> loadThuoc(string ten)
+        {
+            return data.Thuocs.Where(t => t.ten_thuoc == ten);
         }
     }
 }
