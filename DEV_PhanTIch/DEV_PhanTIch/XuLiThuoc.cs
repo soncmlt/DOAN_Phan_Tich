@@ -66,7 +66,7 @@ namespace DEV_PhanTIch
                 thuoc.xuat_xu = pxuatsu;
                 thuoc.gia_ban = pgiaban;
                 thuoc.so_luong = pSL;
-                return true;
+                return true; 
             }
             return false;
         }
