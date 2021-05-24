@@ -1,4 +1,5 @@
-﻿create database ["QL_NhaThuoc"]
+﻿
+create database ["QL_NhaThuoc"]
 use ["QL_NhaThuoc"]
 
 create table NhanVien
