@@ -13,20 +13,20 @@ namespace DEV_PhanTIch
 {
     public partial class FrmBanHang : DevExpress.XtraEditors.XtraForm
     {
-        XuLiBanHang xl =new XuLiBanHang();
+        XuLiBanHang xl = new XuLiBanHang();
         public FrmBanHang()
         {
             InitializeComponent();
         }
-        
+
         public void addItemCBO()
         {
             cbo_TimKiem.Items.Add("Khách hàng");
             cbo_TimKiem.Items.Add("Thuốc");
             cbo_TimKiem.Items.Add("Đơn thuốc");
-            cbo_TimKiem.SelectedItem="Khách hàng";
+            cbo_TimKiem.SelectedItem = "Khách hàng";
         }
-    
+
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
             if (cbo_TimKiem.SelectedIndex == 0)
@@ -37,7 +37,7 @@ namespace DEV_PhanTIch
 
         private void FrmBanHang_Load(object sender, EventArgs e)
         {
-            
+
             addItemCBO();
         }
 
@@ -53,8 +53,8 @@ namespace DEV_PhanTIch
         {
             try
             {
-                xl.themHoaDon(txt_MaHD.Text, txt_MaNV.Text, txt_MaKH.Text, dateTimePicker1.Value,int.Parse( txt_TongTien.Text));
-                
+                xl.themHoaDon(txt_MaHD.Text, txt_MaNV.Text, txt_MaKH.Text, dateTimePicker1.Value, int.Parse(txt_TongTien.Text));
+
             }
             catch
             {
@@ -66,7 +66,7 @@ namespace DEV_PhanTIch
         {
             if (cbo_TimKiem.SelectedItem.ToString() == "Thuốc")
             {
-                
+
             }
             else
                 MessageBox.Show("Không thể thêm vào chi tiết đơn thuốc");
