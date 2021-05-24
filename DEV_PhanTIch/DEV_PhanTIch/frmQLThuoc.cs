@@ -39,7 +39,6 @@ namespace DEV_PhanTIch
         private void btnNhapLai_Click(object sender, EventArgs e)
         {
             txtThongTin.Clear();
-
         }
     }
 }

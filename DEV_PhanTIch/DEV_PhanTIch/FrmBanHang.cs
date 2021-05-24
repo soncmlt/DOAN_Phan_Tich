@@ -13,12 +13,12 @@ namespace DEV_PhanTIch
 {
     public partial class FrmBanHang : DevExpress.XtraEditors.XtraForm
     {
-        XuLiBanHang xl =new XuLiBanHang();
+        XuLiBanHang xl = new XuLiBanHang();
         public FrmBanHang()
         {
             InitializeComponent();
         }
-        
+
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
             loadGridThuoc();
@@ -28,6 +28,11 @@ namespace DEV_PhanTIch
         {
             dgv_KetQua.DataSource = xl.loadThuoc();
             addItemCBO();
+        }
+        public void addItemCBO()
+        {
+            cbo_TimKiem.Items.Add("Khach Hang");
+           
         }
 
         public void loadGridThuoc()
