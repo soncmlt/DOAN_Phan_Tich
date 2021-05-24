@@ -24,6 +24,7 @@ namespace DEV_PhanTIch
             cbo_TimKiem.Items.Add("Khách hàng");
             cbo_TimKiem.Items.Add("Thuốc");
             cbo_TimKiem.Items.Add("Đơn thuốc");
+            cbo_TimKiem.SelectedItem="Khách hàng";
         }
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
