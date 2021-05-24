@@ -19,12 +19,6 @@ namespace DEV_PhanTIch
             InitializeComponent();
         }
         
-        public void addItemCBO()
-        {
-            cbo_TimKiem.Items.Add("Khách hàng");
-            cbo_TimKiem.Items.Add("Thuốc");
-            cbo_TimKiem.Items.Add("Đơn thuốc");
-        }
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
             loadGridThuoc();
