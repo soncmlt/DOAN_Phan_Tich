@@ -55,9 +55,9 @@ namespace DEV_PhanTIch
     partial void UpdateNhomThuoc(NhomThuoc instance);
     partial void DeleteNhomThuoc(NhomThuoc instance);
     #endregion
-		//
+		
 		public DataThuocDataContext() : 
-				base(global::DEV_PhanTIch.Properties.Settings.Default._QL_NhaThuoc_ConnectionString, mappingSource)
+				base(global::DEV_PhanTIch.Properties.Settings.Default._QL_NhaThuoc_ConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1439,7 +1439,7 @@ namespace DEV_PhanTIch
 		
 		private string _ho_ten;
 		
-		private string _gioi_tinh;
+		private System.Nullable<bool> _gioi_tinh;
 		
 		private System.Nullable<int> _tuoi;
 		
@@ -1457,7 +1457,7 @@ namespace DEV_PhanTIch
     partial void OnmaKHChanged();
     partial void Onho_tenChanging(string value);
     partial void Onho_tenChanged();
-    partial void Ongioi_tinhChanging(string value);
+    partial void Ongioi_tinhChanging(System.Nullable<bool> value);
     partial void Ongioi_tinhChanged();
     partial void OntuoiChanging(System.Nullable<int> value);
     partial void OntuoiChanged();
@@ -1513,8 +1513,8 @@ namespace DEV_PhanTIch
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gioi_tinh", DbType="NVarChar(10)")]
-		public string gioi_tinh
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gioi_tinh", DbType="Bit")]
+		public System.Nullable<bool> gioi_tinh
 		{
 			get
 			{
@@ -1649,17 +1649,19 @@ namespace DEV_PhanTIch
 		
 		private string _ho_ten;
 		
-		private string _gioi_tinh;
+		private System.Nullable<bool> _gioi_tinh;
 		
 		private System.Nullable<int> _tuoi;
 		
-		private string _dia_chi;
+		private string _dai_chi;
 		
 		private string _email;
 		
 		private string _soDT;
 		
 		private string _chuc_vu;
+		
+		private string _phan_quyen;
 		
 		private string _ten_DN;
 		
@@ -1677,18 +1679,20 @@ namespace DEV_PhanTIch
     partial void OnmaNVChanged();
     partial void Onho_tenChanging(string value);
     partial void Onho_tenChanged();
-    partial void Ongioi_tinhChanging(string value);
+    partial void Ongioi_tinhChanging(System.Nullable<bool> value);
     partial void Ongioi_tinhChanged();
     partial void OntuoiChanging(System.Nullable<int> value);
     partial void OntuoiChanged();
-    partial void Ondia_chiChanging(string value);
-    partial void Ondia_chiChanged();
+    partial void Ondai_chiChanging(string value);
+    partial void Ondai_chiChanged();
     partial void OnemailChanging(string value);
     partial void OnemailChanged();
     partial void OnsoDTChanging(string value);
     partial void OnsoDTChanged();
     partial void Onchuc_vuChanging(string value);
     partial void Onchuc_vuChanged();
+    partial void Onphan_quyenChanging(string value);
+    partial void Onphan_quyenChanged();
     partial void Onten_DNChanging(string value);
     partial void Onten_DNChanged();
     partial void OnmatkhauChanging(string value);
@@ -1742,8 +1746,8 @@ namespace DEV_PhanTIch
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gioi_tinh", DbType="NVarChar(10)")]
-		public string gioi_tinh
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gioi_tinh", DbType="Bit")]
+		public System.Nullable<bool> gioi_tinh
 		{
 			get
 			{
@@ -1782,22 +1786,22 @@ namespace DEV_PhanTIch
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dia_chi", DbType="NVarChar(200)")]
-		public string dia_chi
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dai_chi", DbType="NVarChar(200)")]
+		public string dai_chi
 		{
 			get
 			{
-				return this._dia_chi;
+				return this._dai_chi;
 			}
 			set
 			{
-				if ((this._dia_chi != value))
+				if ((this._dai_chi != value))
 				{
-					this.Ondia_chiChanging(value);
+					this.Ondai_chiChanging(value);
 					this.SendPropertyChanging();
-					this._dia_chi = value;
-					this.SendPropertyChanged("dia_chi");
-					this.Ondia_chiChanged();
+					this._dai_chi = value;
+					this.SendPropertyChanged("dai_chi");
+					this.Ondai_chiChanged();
 				}
 			}
 		}
@@ -1858,6 +1862,26 @@ namespace DEV_PhanTIch
 					this._chuc_vu = value;
 					this.SendPropertyChanged("chuc_vu");
 					this.Onchuc_vuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phan_quyen", DbType="NVarChar(20)")]
+		public string phan_quyen
+		{
+			get
+			{
+				return this._phan_quyen;
+			}
+			set
+			{
+				if ((this._phan_quyen != value))
+				{
+					this.Onphan_quyenChanging(value);
+					this.SendPropertyChanging();
+					this._phan_quyen = value;
+					this.SendPropertyChanged("phan_quyen");
+					this.Onphan_quyenChanged();
 				}
 			}
 		}
