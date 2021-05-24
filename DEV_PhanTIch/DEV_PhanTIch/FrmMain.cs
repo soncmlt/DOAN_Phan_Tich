@@ -78,5 +78,12 @@ namespace DEV_PhanTIch
             frm.Name = "Khách Hàng";
             ViewChildForm(frm);
         }
+
+        private void btnDoanhThu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmBaoCaoDoanhThu frm = new FrmBaoCaoDoanhThu();
+            frm.Name = "Báo Cáo Doanh Thu";
+            ViewChildForm(frm);
+        }
     }
 }

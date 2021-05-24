@@ -107,6 +107,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XuLiBanHang.cs" />
+    <Compile Include="XuLiBaoCaoDoanhThu.cs" />
     <Compile Include="XuLiKhachHang.cs" />
     <Compile Include="XuLiNhanVien.cs" />
     <Compile Include="XuLiThuoc.cs" />

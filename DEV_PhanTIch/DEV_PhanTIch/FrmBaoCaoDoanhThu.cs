@@ -13,9 +13,16 @@ namespace DEV_PhanTIch
 {
     public partial class FrmBaoCaoDoanhThu : DevExpress.XtraEditors.XtraForm
     {
+        XuLiBaoCaoDoanhThu bc = new XuLiBaoCaoDoanhThu();
         public FrmBaoCaoDoanhThu()
         {
             InitializeComponent();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            gridHDN.DataSource = bc.loadHDN(dateBD, dateKT, lblSHDN, lblSHDX, lblGTN, lblTGTX);
+            gridHDX.DataSource = bc.loadHDX(dateBD,dateKT);
         }
     }
 }
