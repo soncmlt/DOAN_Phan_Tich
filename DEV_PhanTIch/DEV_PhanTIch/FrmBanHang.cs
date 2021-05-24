@@ -26,6 +26,7 @@ namespace DEV_PhanTIch
             cbo_TimKiem.Items.Add("Đơn thuốc");
             cbo_TimKiem.SelectedItem="Khách hàng";
         }
+    
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
             if (cbo_TimKiem.SelectedIndex == 0)
@@ -59,6 +60,16 @@ namespace DEV_PhanTIch
             {
                 MessageBox.Show("ERROR");
             }
+        }
+
+        private void btn_ThemThuoc_Click(object sender, EventArgs e)
+        {
+            if (cbo_TimKiem.SelectedItem.ToString() == "Thuốc")
+            {
+                dgv_CTDT.CurrentRow.Cells[0].Value = "Khang";
+            }
+            else
+                MessageBox.Show("Không thể thêm vào chi tiết đơn thuốc");
         }
     }
 }
