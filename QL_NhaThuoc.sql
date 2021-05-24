@@ -5,13 +5,12 @@ create table NhanVien
 (
 	maNV nvarchar(10) not null,
 	ho_ten nvarchar(50),
-	gioi_tinh bit,
+	gioi_tinh nvarchar(10),
 	tuoi int,
-	dai_chi nvarchar(200),
+	dia_chi nvarchar(200),
 	email nvarchar(50),
 	soDT char(10),
 	chuc_vu nvarchar(50),
-	phan_quyen nvarchar(20),
 	ten_DN nvarchar(20),
 	matkhau nvarchar(20),
 	constraint PK_NhanVien primary key (maNV)
