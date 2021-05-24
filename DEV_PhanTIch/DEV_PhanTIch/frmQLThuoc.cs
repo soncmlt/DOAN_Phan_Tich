@@ -14,6 +14,7 @@ namespace DEV_PhanTIch
     public partial class frmQLThuoc : DevExpress.XtraEditors.XtraForm
     {
         XuLiThuoc thuoc = new XuLiThuoc();
+        DataThuocDataContext data = new DataThuocDataContext();
         public frmQLThuoc()
         {
             InitializeComponent();
@@ -23,27 +24,22 @@ namespace DEV_PhanTIch
         {
             gridDsThuoc.DataSource = thuoc.loadThuoc();
         }
-
         private void txtThongTin_TextChanged(object sender, EventArgs e)
         {
-            BindingSource bs = new BindingSource();
-            bs.DataSource = gridDsThuoc.DataSource;
-            if (cbPhuongThuc.SelectedItem.ToString() == "Mã Thuốc")
-            {
-                bs.Filter = "ma_thuoc like '%" + txtThongTin.Text + "%'";
-                gridDsThuoc.DataSource = bs;
-            }
-            else if (cbPhuongThuc.SelectedItem.ToString() == "Mã Nhóm")
-            {
-                bs.Filter = "ma_nhom like '%" + txtThongTin.Text + "%'";
-                gridDsThuoc.DataSource = bs;
-            }
+            if(cbPhuongThuc.SelectedItem.ToString() == "Mã Thuốc")
+                gridKQTK.DataSource = data.Thuocs.Where(c => c.ma_thuoc.Contains(txtThongTin.Text));
             else if (cbPhuongThuc.SelectedItem.ToString() == "Tên Thuốc")
-            {
-                bs.Filter = "ten_thuoc like '%" + txtThongTin.Text + "%'";
-                gridDsThuoc.DataSource = bs;
+                gridKQTK.DataSource = data.Thuocs.Where(c => c.ten_thuoc.Contains(txtThongTin.Text));
+            else if (cbPhuongThuc.SelectedItem.ToString() == "Mã Nhóm")
+                gridKQTK.DataSource = data.Thuocs.Where(c => c.ma_nhom.Contains(txtThongTin.Text));
+            else
+                gridKQTK.DataSource = data.Thuocs.Where(c => c.cong_dung.Contains(txtThongTin.Text));
+        }
 
-            }
+        private void btnNhapLai_Click(object sender, EventArgs e)
+        {
+            txtThongTin.Clear();
+
         }
     }
 }

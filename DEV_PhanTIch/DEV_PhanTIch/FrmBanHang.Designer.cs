@@ -37,7 +37,7 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dgv_KetQua = new System.Windows.Forms.DataGridView();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_CTDT = new System.Windows.Forms.DataGridView();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_TongTien = new DevExpress.XtraEditors.TextEdit();
@@ -55,13 +55,16 @@
             this.btn_HuyHD = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Luu = new DevExpress.XtraEditors.SimpleButton();
             this.cbo_TimKiem = new System.Windows.Forms.ComboBox();
+            this.MaThuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TimKiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KetQua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_CTDT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TongTien.Properties)).BeginInit();
@@ -139,26 +142,31 @@
             this.dgv_KetQua.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_KetQua.Location = new System.Drawing.Point(2, 23);
             this.dgv_KetQua.Name = "dgv_KetQua";
+            this.dgv_KetQua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_KetQua.Size = new System.Drawing.Size(772, 104);
             this.dgv_KetQua.TabIndex = 0;
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.dataGridView1);
+            this.groupControl2.Controls.Add(this.dgv_CTDT);
             this.groupControl2.Location = new System.Drawing.Point(12, 256);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(334, 127);
             this.groupControl2.TabIndex = 8;
             this.groupControl2.Text = "Chi tiết đơn thuốc";
             // 
-            // dataGridView1
+            // dgv_CTDT
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(330, 102);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_CTDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_CTDT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaThuoc,
+            this.GiaBan,
+            this.SoLuong});
+            this.dgv_CTDT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_CTDT.Location = new System.Drawing.Point(2, 23);
+            this.dgv_CTDT.Name = "dgv_CTDT";
+            this.dgv_CTDT.Size = new System.Drawing.Size(330, 102);
+            this.dgv_CTDT.TabIndex = 0;
             // 
             // groupControl3
             // 
@@ -261,6 +269,7 @@
             this.btn_ThemThuoc.Size = new System.Drawing.Size(75, 23);
             this.btn_ThemThuoc.TabIndex = 10;
             this.btn_ThemThuoc.Text = "Thêm thuốc";
+            this.btn_ThemThuoc.Click += new System.EventHandler(this.btn_ThemThuoc_Click);
             // 
             // btn_XoaThuoc
             // 
@@ -303,6 +312,21 @@
             this.cbo_TimKiem.Size = new System.Drawing.Size(168, 21);
             this.cbo_TimKiem.TabIndex = 15;
             // 
+            // MaThuoc
+            // 
+            this.MaThuoc.HeaderText = "Mã thuốc";
+            this.MaThuoc.Name = "MaThuoc";
+            // 
+            // GiaBan
+            // 
+            this.GiaBan.HeaderText = "Giá bán";
+            this.GiaBan.Name = "GiaBan";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
             // FrmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,7 +356,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KetQua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_CTDT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
@@ -371,8 +395,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.TextEdit txt_MaKH;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_CTDT;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox cbo_TimKiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaThuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
     }
 }
