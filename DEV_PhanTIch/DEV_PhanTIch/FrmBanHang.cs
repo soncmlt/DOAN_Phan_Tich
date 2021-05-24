@@ -19,6 +19,12 @@ namespace DEV_PhanTIch
             InitializeComponent();
         }
         
+        public void addItemCBO()
+        {
+            cbo_TimKiem.Items.Add("Khách hàng");
+            cbo_TimKiem.Items.Add("Thuốc");
+            cbo_TimKiem.Items.Add("Đơn thuốc");
+        }
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
             loadGridThuoc();
@@ -27,6 +33,7 @@ namespace DEV_PhanTIch
         private void FrmBanHang_Load(object sender, EventArgs e)
         {
             dgv_KetQua.DataSource = xl.loadThuoc();
+            addItemCBO();
         }
 
         public void loadGridThuoc()
@@ -39,7 +46,7 @@ namespace DEV_PhanTIch
             try
             {
                 xl.themHoaDon(txt_MaHD.Text, txt_MaNV.Text, txt_MaKH.Text, dateTimePicker1.Value,int.Parse( txt_TongTien.Text));
-                MessageBox.Show("Lưu thành công");
+                
             }
             catch
             {
