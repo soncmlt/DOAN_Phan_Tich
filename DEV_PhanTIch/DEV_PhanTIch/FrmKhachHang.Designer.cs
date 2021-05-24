@@ -30,6 +30,12 @@
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridDSKH = new System.Windows.Forms.DataGridView();
+            this.maNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ho_ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioi_tinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLuu = new System.Windows.Forms.Button();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,12 +53,6 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.maNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ho_ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioi_tinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDSKH)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -85,6 +85,42 @@
             this.gridDSKH.Size = new System.Drawing.Size(644, 237);
             this.gridDSKH.TabIndex = 0;
             // 
+            // maNV
+            // 
+            this.maNV.DataPropertyName = "maKH";
+            this.maNV.HeaderText = "Mã Khách Hàng";
+            this.maNV.Name = "maNV";
+            // 
+            // ho_ten
+            // 
+            this.ho_ten.DataPropertyName = "ho_ten";
+            this.ho_ten.HeaderText = "Họ Và Tên";
+            this.ho_ten.Name = "ho_ten";
+            // 
+            // gioi_tinh
+            // 
+            this.gioi_tinh.DataPropertyName = "gioi_tinh";
+            this.gioi_tinh.HeaderText = "Giới Tính";
+            this.gioi_tinh.Name = "gioi_tinh";
+            // 
+            // tuoi
+            // 
+            this.tuoi.DataPropertyName = "tuoi";
+            this.tuoi.HeaderText = "Tuổi";
+            this.tuoi.Name = "tuoi";
+            // 
+            // soDT
+            // 
+            this.soDT.DataPropertyName = "soDT";
+            this.soDT.HeaderText = "Số Điện Thoại";
+            this.soDT.Name = "soDT";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "diem";
+            this.Column1.HeaderText = "Điểm";
+            this.Column1.Name = "Column1";
+            // 
             // btnLuu
             // 
             this.btnLuu.Location = new System.Drawing.Point(211, 168);
@@ -93,6 +129,7 @@
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // txtSDT
             // 
@@ -204,9 +241,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(7, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mã Nhân Viên";
+            this.label1.Text = "Mã Khách Hàng";
             // 
             // btnSua
             // 
@@ -234,6 +271,7 @@
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox1
             // 
@@ -246,42 +284,6 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức Năng";
-            // 
-            // maNV
-            // 
-            this.maNV.DataPropertyName = "maKH";
-            this.maNV.HeaderText = "Mã Khách Hàng";
-            this.maNV.Name = "maNV";
-            // 
-            // ho_ten
-            // 
-            this.ho_ten.DataPropertyName = "ho_ten";
-            this.ho_ten.HeaderText = "Họ Và Tên";
-            this.ho_ten.Name = "ho_ten";
-            // 
-            // gioi_tinh
-            // 
-            this.gioi_tinh.DataPropertyName = "gioi_tinh";
-            this.gioi_tinh.HeaderText = "Giới Tính";
-            this.gioi_tinh.Name = "gioi_tinh";
-            // 
-            // tuoi
-            // 
-            this.tuoi.DataPropertyName = "tuoi";
-            this.tuoi.HeaderText = "Tuổi";
-            this.tuoi.Name = "tuoi";
-            // 
-            // soDT
-            // 
-            this.soDT.DataPropertyName = "soDT";
-            this.soDT.HeaderText = "Số Điện Thoại";
-            this.soDT.Name = "soDT";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "diem";
-            this.Column1.HeaderText = "Điểm";
-            this.Column1.Name = "Column1";
             // 
             // FrmKhachHang
             // 

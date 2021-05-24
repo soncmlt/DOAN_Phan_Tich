@@ -23,5 +23,23 @@ namespace DEV_PhanTIch
         {
             gridDSKH.DataSource = kh.loadKH();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (kh.ThemKH(txtmaKH.Text, txtHoTen.Text, cbgioitinh.SelectedItem.ToString(), int.Parse(txtTuoi.Text), txtSDT.Text))
+            {
+                MessageBox.Show("Thêm Khách Hàng Thành Công");
+
+            }
+            else
+                MessageBox.Show("Khách Hàng Này Đã Tồn Tại");
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            kh.Luu();
+            gridDSKH.DataSource = kh.loadKH();
+            MessageBox.Show("Lưu Thông Tin Thành Công");
+        }
     }
 }

@@ -34,13 +34,19 @@ namespace DEV_PhanTIch
                     tuoi = ptuoi,
                     soDT = pSDT,
                     diem = 0,
-                    
                 };
-                data.NhanViens.InsertOnSubmit(nv);
+                data.KhachHangs.InsertOnSubmit(kh);
                 //data.SubmitChanges();
-                loadNV();
+                
                 return true;
             }
+            else
+                return false;
+        }
+
+        public void Luu()
+        {
+            data.SubmitChanges();
         }
     }
 }
