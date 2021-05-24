@@ -25,7 +25,7 @@ namespace DEV_PhanTIch
         }
 
         //Hàm Thêm Nhân Viên  - Sơn
-        public bool ThemNV(String pmaNV, String phoTen, String pgioitinh, int ptuoi, String pdiaChi, String pchucvu, String pSDT)
+        public bool ThemNV(String pmaNV, String phoTen, String pgioitinh, int ptuoi, String pdiaChi, String pchucvu, String pSDT, String pemail)
         {
             if (ktraNV(pmaNV))
             {
@@ -40,7 +40,7 @@ namespace DEV_PhanTIch
                     ten_DN = pmaNV,
                     matkhau = pSDT,
                     soDT = pSDT,
-                    email = "",
+                    email = pemail,
                 };
                 data.NhanViens.InsertOnSubmit(nv);
                 //data.SubmitChanges();
