@@ -15,5 +15,16 @@ namespace DEV_PhanTIch
         {
             return data.Thuocs.Select(t => t);
         }
+
+        public IQueryable<Thuoc> timKiem(String pvalues, String pinfo)
+        {
+            if (pvalues == "Mã Thuốc")
+                return data.Thuocs.Select(t => t).Where(t => t.ma_thuoc == "% " + pinfo + " %");
+            else if(pvalues == "Tên Thuốc")
+                return data.Thuocs.Select(t => t).Where(t => t.ten_thuoc == "% " + pinfo + " %");
+            else
+                return data.Thuocs.Select(t => t).Where(t => t.ma_nhom == "% " + pinfo + " %");
+
+        }
     }
 }

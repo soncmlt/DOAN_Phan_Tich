@@ -58,6 +58,7 @@
             this.MaThuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TimKiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -157,6 +158,7 @@
             // 
             // dgv_CTDT
             // 
+            this.dgv_CTDT.AllowUserToAddRows = false;
             this.dgv_CTDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_CTDT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaThuoc,
@@ -278,6 +280,7 @@
             this.btn_XoaThuoc.Size = new System.Drawing.Size(75, 23);
             this.btn_XoaThuoc.TabIndex = 11;
             this.btn_XoaThuoc.Text = "Xóa thuốc";
+            this.btn_XoaThuoc.Click += new System.EventHandler(this.btn_XoaThuoc_Click);
             // 
             // btn_HuyThuoc
             // 
@@ -286,10 +289,11 @@
             this.btn_HuyThuoc.Size = new System.Drawing.Size(75, 23);
             this.btn_HuyThuoc.TabIndex = 12;
             this.btn_HuyThuoc.Text = "Hủy";
+            this.btn_HuyThuoc.Click += new System.EventHandler(this.btn_HuyThuoc_Click);
             // 
             // btn_HuyHD
             // 
-            this.btn_HuyHD.Location = new System.Drawing.Point(692, 283);
+            this.btn_HuyHD.Location = new System.Drawing.Point(692, 331);
             this.btn_HuyHD.Name = "btn_HuyHD";
             this.btn_HuyHD.Size = new System.Drawing.Size(75, 50);
             this.btn_HuyHD.TabIndex = 14;
@@ -297,7 +301,7 @@
             // 
             // btn_Luu
             // 
-            this.btn_Luu.Location = new System.Drawing.Point(692, 227);
+            this.btn_Luu.Location = new System.Drawing.Point(692, 275);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(75, 50);
             this.btn_Luu.TabIndex = 13;
@@ -327,11 +331,21 @@
             this.SoLuong.HeaderText = "Số lượng";
             this.SoLuong.Name = "SoLuong";
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(692, 227);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 16;
+            this.simpleButton1.Text = "Lưu chi tiết";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // FrmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 390);
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.cbo_TimKiem);
             this.Controls.Add(this.btn_HuyHD);
             this.Controls.Add(this.btn_Luu);
@@ -401,5 +415,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaThuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

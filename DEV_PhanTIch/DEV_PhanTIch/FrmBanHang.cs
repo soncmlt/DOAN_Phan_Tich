@@ -51,8 +51,10 @@ namespace DEV_PhanTIch
         }
         private void btn_Luu_Click(object sender, EventArgs e)
         {
+            
             try
-            {
+            {              
+                txt_TongTien.Text = xl.tinhTongTien(dgv_CTDT).ToString();
                 xl.themHoaDon(txt_MaHD.Text, txt_MaNV.Text, txt_MaKH.Text, dateTimePicker1.Value, int.Parse(txt_TongTien.Text));
 
             }
@@ -62,14 +64,69 @@ namespace DEV_PhanTIch
             }
         }
 
+
+
         private void btn_ThemThuoc_Click(object sender, EventArgs e)
         {
+            int sl;
             if (cbo_TimKiem.SelectedItem.ToString() == "Thuốc")
             {
+                if (dgv_CTDT.Rows.Count == 0)
+                {
+                    dgv_CTDT.Rows.Add(dgv_KetQua.CurrentRow.Cells[0].Value.ToString(), dgv_KetQua.CurrentRow.Cells[7].Value.ToString(), "1");
+                }
+                else
+                {
+                    sl = 1;
+                for (int j = 0; j < dgv_CTDT.Rows.Count ; j++)
+                {
+                    if (dgv_CTDT.Rows[j].Cells[0].Value == dgv_KetQua.CurrentRow.Cells[0].Value)
+                    {
 
+                        if (int.Parse(dgv_CTDT.Rows[j].Cells[2].Value.ToString()) < int.Parse(dgv_KetQua.CurrentRow.Cells[8].Value.ToString()))
+                        {
+                            sl = int.Parse(dgv_CTDT.Rows[j].Cells[2].Value.ToString()) + 1;
+                            dgv_CTDT.Rows.Remove(dgv_CTDT.Rows[j]);
+                            dgv_CTDT.Rows.Add(dgv_KetQua.CurrentRow.Cells[0].Value.ToString(), dgv_KetQua.CurrentRow.Cells[7].Value.ToString(), sl);
+                               
+                        }    
+                    }
+                        
+                }
+                    if (dgv_CTDT.Rows[dgv_CTDT.Rows.Count-1].Cells[0].Value != dgv_KetQua.CurrentRow.Cells[0].Value)
+                    {
+                        dgv_CTDT.Rows.Add(dgv_KetQua.CurrentRow.Cells[0].Value.ToString(), dgv_KetQua.CurrentRow.Cells[7].Value.ToString(), "1");
+
+                    }
+                }
             }
             else
                 MessageBox.Show("Không thể thêm vào chi tiết đơn thuốc");
+        }
+
+        private void btn_XoaThuoc_Click(object sender, EventArgs e)
+        {
+            if (dgv_CTDT.CurrentRow != null)
+            {
+                dgv_CTDT.Rows.Remove(dgv_CTDT.CurrentRow);
+            }
+        }
+
+        private void btn_HuyThuoc_Click(object sender, EventArgs e)
+        {
+            dgv_CTDT.Rows.Clear();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            try
+            { 
+            xl.themCTHoaDon(dgv_CTDT, txt_MaHD.Text);
+            }
+            catch
+            {
+                MessageBox.Show("ERRORRRRRRRRRRRR");
+            }
         }
     }
 }

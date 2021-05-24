@@ -73,7 +73,7 @@ create table CTHoaDonNhap
 
 create table HoaDonXuat
 (
-	maHD_Xuat nvarchar(10) not null,
+	maHD_Xuat nvarchar(10) not null ,
 	maNV nvarchar(10) not null,
 	maKH nvarchar(10),
 	ngay_xuat datetime,
@@ -85,7 +85,7 @@ create table HoaDonXuat
 
 create table CTHoaDonXuat
 (
-	maHD_Xuat nvarchar(10) not null,
+	maHD_Xuat nvarchar(10) not null ,
 	ma_thuoc nvarchar(10) not null,
 	gia_ban int,
 	SL_ban int,
@@ -94,7 +94,11 @@ create table CTHoaDonXuat
 	constraint FK_CTHoaDonXuat_HoaDonXuat FOREIGN KEY (maHD_Xuat) REFERENCES HoaDonXuat(maHD_Xuat)
 )
 
-
+drop table CTHoaDonXuat
+drop table HoaDonXuat
 insert into NhanVien values('NV001',N'Nnguyễn Văn A',N'Nam',32,N'1 Trường Chinh',N'ABC@gmail.com','0123456789',N'Nhân Viên',N'abc',N'123')
 insert into KhachHang values('0123456789',N'Nguyễn văn B',N'Nam',20,'0123456789',1)
 
+select*from HoaDonXuat
+select * from  CTHoaDonXuat
+select * from Thuoc
