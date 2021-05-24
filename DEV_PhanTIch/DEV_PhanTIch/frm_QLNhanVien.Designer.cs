@@ -305,6 +305,7 @@
             // 
             // gridDSNV
             // 
+            this.gridDSNV.AllowUserToAddRows = false;
             this.gridDSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridDSNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maNV,
@@ -321,6 +322,7 @@
             this.gridDSNV.Name = "gridDSNV";
             this.gridDSNV.Size = new System.Drawing.Size(734, 389);
             this.gridDSNV.TabIndex = 0;
+            this.gridDSNV.SelectionChanged += new System.EventHandler(this.gridDSNV_SelectionChanged);
             // 
             // maNV
             // 

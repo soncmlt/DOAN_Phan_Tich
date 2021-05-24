@@ -19,10 +19,11 @@ namespace DEV_PhanTIch
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (nv.ThemNV(txtmaNV.Text, txtHoTen.Text, cbgioitinh.SelectedItem.ToString(), int.Parse(txtTuoi.Text), txtDiaChi.Text, cbChucVu.SelectedItem.ToString(), txtSDT.Text) == true)
+            if (nv.ThemNV(txtmaNV.Text, txtHoTen.Text, cbgioitinh.SelectedItem.ToString(), int.Parse(txtTuoi.Text), txtDiaChi.Text, cbChucVu.SelectedItem.ToString(), txtSDT.Text, txtEmail.Text) == true)
             {
+                
                 MessageBox.Show("Thêm Nhân Viên Thành Công");
-                gridDSNV.DataSource = nv.loadNV();
+                
             }
             else
                 MessageBox.Show("Nhân Viên này đã tồn tại hoặc bạn nhập sai định dạng");
@@ -53,6 +54,22 @@ namespace DEV_PhanTIch
         private void btnLuu_Click(object sender, EventArgs e)
         {
             nv.Luu();
+            MessageBox.Show("LLưu Thành Công");
+            gridDSNV.DataSource = nv.loadNV();
+        }
+
+        private void gridDSNV_SelectionChanged(object sender, EventArgs e)
+        {
+            if (gridDSNV.CurrentRow != null)
+            {
+                txtmaNV.Text = gridDSNV.CurrentRow.Cells[0].Value.ToString();
+                txtHoTen.Text = gridDSNV.CurrentRow.Cells[1].Value.ToString();
+                cbgioitinh.Text = gridDSNV.CurrentRow.Cells[2].Value.ToString();
+                txtTuoi.Text = gridDSNV.CurrentRow.Cells[3].Value.ToString();
+                txtDiaChi.Text = gridDSNV.CurrentRow.Cells[4].Value.ToString();
+                txtEmail.Text = gridDSNV.CurrentRow.Cells[5].Value.ToString();
+                txtSDT.Text = gridDSNV.CurrentRow.Cells[6].Value.ToString();
+            }
         }
     }
 }

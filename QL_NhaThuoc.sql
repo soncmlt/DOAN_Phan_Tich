@@ -20,7 +20,7 @@ create table KhachHang
 (
 	maKH nvarchar(10) not null,/*Mã khách hàng được quy định là số điện thoại */
 	ho_ten nvarchar(50),
-	gioi_tinh bit,
+	gioi_tinh nvarchar(10),
 	tuoi int,
 	soDT char(10),
 	diem int,
