@@ -42,7 +42,6 @@
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.txt_TongTien = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_NgayXuat = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txt_MaKH = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -55,6 +54,7 @@
             this.btn_HuyThuoc = new DevExpress.XtraEditors.SimpleButton();
             this.btn_HuyHD = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Luu = new DevExpress.XtraEditors.SimpleButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_TimKiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TimKiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -66,7 +66,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TongTien.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_NgayXuat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaKH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaNV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaHD.Properties)).BeginInit();
@@ -173,9 +172,9 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.Controls.Add(this.dateTimePicker1);
             this.groupControl3.Controls.Add(this.txt_TongTien);
             this.groupControl3.Controls.Add(this.labelControl9);
-            this.groupControl3.Controls.Add(this.txt_NgayXuat);
             this.groupControl3.Controls.Add(this.labelControl8);
             this.groupControl3.Controls.Add(this.txt_MaKH);
             this.groupControl3.Controls.Add(this.labelControl7);
@@ -203,13 +202,6 @@
             this.labelControl9.Size = new System.Drawing.Size(45, 13);
             this.labelControl9.TabIndex = 17;
             this.labelControl9.Text = "Tổng tiền";
-            // 
-            // txt_NgayXuat
-            // 
-            this.txt_NgayXuat.Location = new System.Drawing.Point(82, 104);
-            this.txt_NgayXuat.Name = "txt_NgayXuat";
-            this.txt_NgayXuat.Size = new System.Drawing.Size(247, 20);
-            this.txt_NgayXuat.TabIndex = 16;
             // 
             // labelControl8
             // 
@@ -304,6 +296,14 @@
             this.btn_Luu.Size = new System.Drawing.Size(75, 50);
             this.btn_Luu.TabIndex = 13;
             this.btn_Luu.Text = "Lưu";
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(83, 105);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(246, 21);
+            this.dateTimePicker1.TabIndex = 19;
             // 
             // FrmBanHang
             // 
@@ -340,7 +340,6 @@
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TongTien.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_NgayXuat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaKH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaNV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaHD.Properties)).EndInit();
@@ -373,10 +372,10 @@
         private DevExpress.XtraEditors.TextEdit txt_MaHD;
         private DevExpress.XtraEditors.TextEdit txt_TongTien;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.TextEdit txt_NgayXuat;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.TextEdit txt_MaKH;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

@@ -1,6 +1,5 @@
 ﻿create database ["QL_NhaThuoc"]
 use ["QL_NhaThuoc"]
-
 create table NhanVien
 (
 	maNV nvarchar(10) not null,
