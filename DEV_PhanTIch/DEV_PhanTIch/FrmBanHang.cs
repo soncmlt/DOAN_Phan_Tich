@@ -66,7 +66,7 @@ namespace DEV_PhanTIch
         {
             if (cbo_TimKiem.SelectedItem.ToString() == "Thuốc")
             {
-                dgv_CTDT.CurrentRow.Cells[0].Value = "Khang";
+                
             }
             else
                 MessageBox.Show("Không thể thêm vào chi tiết đơn thuốc");
