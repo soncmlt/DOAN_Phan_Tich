@@ -42,6 +42,7 @@ namespace DEV_PhanTIch
             {
                 bs.Filter = "ten_thuoc like '%" + txtThongTin.Text + "%'";
                 gridDsThuoc.DataSource = bs;
+
             }
         }
     }
