@@ -21,8 +21,9 @@ namespace DEV_PhanTIch
         {
             if (nv.ThemNV(txtmaNV.Text, txtHoTen.Text, cbgioitinh.SelectedItem.ToString(), int.Parse(txtTuoi.Text), txtDiaChi.Text, cbChucVu.SelectedItem.ToString(), txtSDT.Text) == true)
             {
+                
                 MessageBox.Show("Thêm Nhân Viên Thành Công");
-                gridDSNV.DataSource = nv.loadNV();
+                
             }
             else
                 MessageBox.Show("Nhân Viên này đã tồn tại hoặc bạn nhập sai định dạng");
@@ -53,6 +54,8 @@ namespace DEV_PhanTIch
         private void btnLuu_Click(object sender, EventArgs e)
         {
             nv.Luu();
+            MessageBox.Show("LLưu Thành Công");
+            gridDSNV.DataSource = nv.loadNV();
         }
     }
 }

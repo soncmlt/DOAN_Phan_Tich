@@ -52,9 +52,9 @@ namespace DEV_PhanTIch
         }
 
         //Hàm Sửa Thông Tin Nhân Viên
-        public bool editNV(String pmaNV, String phoTen, String pgioitinh, int ptuoi, String pdiaChi, string pchucvu, String pEmail, String pSDT)
+        public bool editNV(String pmaNV, String phoTen, String pgioitinh, int ptuoi, String pdiaChi, String pchucvu, String pEmail, String pSDT)
         {
-            if (ktraNV(pmaNV) == false)
+            if (!ktraNV(pmaNV))
             {
                 NhanVien nv = data.NhanViens.Where(t => t.maNV == pmaNV).Single();
                 nv.maNV = pmaNV;
