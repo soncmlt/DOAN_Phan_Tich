@@ -1,5 +1,6 @@
 ﻿create database ["QL_NhaThuoc"]
 use ["QL_NhaThuoc"]
+
 create table NhanVien
 (
 	maNV nvarchar(10) not null,
@@ -99,7 +100,12 @@ drop table HoaDonXuat
 insert into NhanVien values('NV001',N'Nnguyễn Văn A',N'Nam',32,N'1 Trường Chinh',N'ABC@gmail.com','0123456789',N'Nhân Viên',N'abc',N'123')
 insert into KhachHang values('0123456789',N'Nguyễn văn B',N'Nam',20,'0123456789',1)
 
+<<<<<<< HEAD
 select*from HoaDonXuat
 select * from  CTHoaDonXuat
 select * from Thuoc
 select * from KhachHang
+=======
+
+select * from Thuoc
+>>>>>>> c98fb80c62c3ddb36489d5a1b348819f75c45f9f

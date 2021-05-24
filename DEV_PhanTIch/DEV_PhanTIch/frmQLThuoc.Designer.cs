@@ -184,6 +184,61 @@
             this.gridKQTK.Name = "gridKQTK";
             this.gridKQTK.Size = new System.Drawing.Size(709, 111);
             this.gridKQTK.TabIndex = 0;
+            this.gridKQTK.SelectionChanged += new System.EventHandler(this.gridKQTK_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "ma_thuoc";
+            this.Column1.HeaderText = "Mã Thuốc";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "ma_nhom";
+            this.Column2.HeaderText = "Mã Nhóm";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "ten_thuoc";
+            this.Column3.HeaderText = "Tên Thuốc";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "cong_dung";
+            this.Column4.HeaderText = "Công Dụng";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "thanh_phan";
+            this.Column5.HeaderText = "Thành Phần";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "xuat_xu";
+            this.Column6.HeaderText = "Xuất Xứ";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "dvt";
+            this.Column7.HeaderText = "Đơn Vị Tính";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "gia_ban";
+            this.Column8.HeaderText = "Giá Bán";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "so_luong";
+            this.Column9.HeaderText = "Số Lượng";
+            this.Column9.Name = "Column9";
             // 
             // Column1
             // 
@@ -280,6 +335,7 @@
             this.btnLuu.TabIndex = 5;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -289,6 +345,7 @@
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -298,6 +355,7 @@
             this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -337,6 +395,10 @@
             this.gridDsThuoc.Name = "gridDsThuoc";
             this.gridDsThuoc.Size = new System.Drawing.Size(709, 340);
             this.gridDsThuoc.TabIndex = 1;
+<<<<<<< HEAD
+=======
+            this.gridDsThuoc.SelectionChanged += new System.EventHandler(this.gridDsThuoc_SelectionChanged);
+>>>>>>> c98fb80c62c3ddb36489d5a1b348819f75c45f9f
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -486,6 +548,10 @@
             // cbDVT
             // 
             this.cbDVT.FormattingEnabled = true;
+            this.cbDVT.Items.AddRange(new object[] {
+            "Vỉ",
+            "Hộp",
+            "Viên"});
             this.cbDVT.Location = new System.Drawing.Point(81, 154);
             this.cbDVT.Name = "cbDVT";
             this.cbDVT.Size = new System.Drawing.Size(221, 21);
