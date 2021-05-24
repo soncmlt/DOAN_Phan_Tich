@@ -102,3 +102,4 @@ insert into KhachHang values('0123456789',N'Nguyễn văn B',N'Nam',20,'01234567
 select*from HoaDonXuat
 select * from  CTHoaDonXuat
 select * from Thuoc
+select * from KhachHang
