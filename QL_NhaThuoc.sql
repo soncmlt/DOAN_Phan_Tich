@@ -97,4 +97,4 @@ create table CTHoaDonXuat
 
 insert into NhanVien values('NV001',N'Nnguyễn Văn A',N'Nam',32,N'1 Trường Chinh',N'ABC@gmail.com','0123456789',N'Nhân Viên',N'abc',N'123')
 insert into KhachHang values('0123456789',N'Nguyễn văn B',N'Nam',20,'0123456789',1)
-select * from HoaDonXuat
+
