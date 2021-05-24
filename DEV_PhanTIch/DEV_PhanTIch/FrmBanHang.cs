@@ -28,12 +28,15 @@ namespace DEV_PhanTIch
         }
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            loadGridThuoc();
+            if (cbo_TimKiem.SelectedIndex == 0)
+                loadGridKhachHang();
+            else
+                loadGridThuoc();
         }
 
         private void FrmBanHang_Load(object sender, EventArgs e)
         {
-            dgv_KetQua.DataSource = xl.loadThuoc();
+            
             addItemCBO();
         }
 
@@ -41,7 +44,10 @@ namespace DEV_PhanTIch
         {
             dgv_KetQua.DataSource = xl.loadThuoc(txt_TimKiem.Text);
         }
-
+        public void loadGridKhachHang()
+        {
+            dgv_KetQua.DataSource = xl.loadKH(txt_TimKiem.Text);
+        }
         private void btn_Luu_Click(object sender, EventArgs e)
         {
             try

@@ -20,6 +20,10 @@ namespace DEV_PhanTIch
         {
             return data.Thuocs.Where(t => t.ten_thuoc == ten);
         }
+        public IQueryable<KhachHang> loadKH(string pMaKH)
+        {
+            return data.KhachHangs.Where(t => t.maKH == pMaKH);
+        }
         public void themHoaDon(string maHD, string maNV, string maKH, DateTime NgayXuat, int tongTien)
         {
             HoaDonXuat hd = new HoaDonXuat();
