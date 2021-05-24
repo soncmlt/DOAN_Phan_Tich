@@ -48,5 +48,34 @@ namespace DEV_PhanTIch
         {
             data.SubmitChanges();
         }
+
+        public bool editNV(String pmaKH, String phoTen, String pgioitinh, int ptuoi, String pSDT)
+        {
+            if (!ktraKH(pmaKH))
+            {
+                KhachHang nv = data.KhachHangs.Where(t => t.maKH == pmaKH).Single();
+                nv.maKH = pmaKH;
+                nv.ho_ten = phoTen;
+                nv.gioi_tinh = pgioitinh;
+                nv.tuoi = ptuoi;
+                nv.soDT = pSDT;
+                //data.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool deleteNV(String pmaKH)
+        {
+            if (ktraKH(pmaKH) == false)
+            {
+                KhachHang kh = data.KhachHangs.Where(t => t.maKH == pmaKH).Single();
+                kh.maKH = pmaKH;
+                data.KhachHangs.DeleteOnSubmit(kh);
+                //data.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
     }
 }

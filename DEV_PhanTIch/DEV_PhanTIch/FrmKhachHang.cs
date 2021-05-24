@@ -41,5 +41,39 @@ namespace DEV_PhanTIch
             gridDSKH.DataSource = kh.loadKH();
             MessageBox.Show("Lưu Thông Tin Thành Công");
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (kh.deleteNV(txtmaKH.Text))
+            {
+                MessageBox.Show("Xóa Khách Hàng Thành Công");
+                gridDSKH.DataSource = kh.loadKH();
+            }
+            else
+                MessageBox.Show("Xóa Thất Bại");
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (kh.editNV(txtmaKH.Text, txtHoTen.Text, cbgioitinh.SelectedItem.ToString(), int.Parse(txtTuoi.Text), txtSDT.Text) == true)
+            {
+                MessageBox.Show("Sửa Thông Tin Khách Hàng Thành Công");
+                gridDSKH.DataSource = kh.loadKH();
+            }
+            else
+                MessageBox.Show("Sửa Thất Bại");
+        }
+
+        private void gridDSKH_SelectionChanged(object sender, EventArgs e)
+        {
+            if (gridDSKH.CurrentRow != null)
+            {
+                txtmaKH.Text = gridDSKH.CurrentRow.Cells[0].Value.ToString();
+                txtHoTen.Text = gridDSKH.CurrentRow.Cells[1].Value.ToString();
+                cbgioitinh.Text = gridDSKH.CurrentRow.Cells[2].Value.ToString();
+                txtTuoi.Text = gridDSKH.CurrentRow.Cells[3].Value.ToString();
+                txtSDT.Text = gridDSKH.CurrentRow.Cells[4].Value.ToString();
+            }
+        }
     }
 }
