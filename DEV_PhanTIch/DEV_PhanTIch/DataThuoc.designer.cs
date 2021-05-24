@@ -57,7 +57,11 @@ namespace DEV_PhanTIch
     #endregion
 		
 		public DataThuocDataContext() : 
+<<<<<<< HEAD
 				base(global::DEV_PhanTIch.Properties.Settings.Default._QL_NhaThuoc_ConnectionString2, mappingSource)
+=======
+				base(global::DEV_PhanTIch.Properties.Settings.Default._QL_NhaThuoc_ConnectionString1, mappingSource)
+>>>>>>> ab3b7af52a998b6f285e3848edfe003a6a9b5dc2
 		{
 			OnCreated();
 		}

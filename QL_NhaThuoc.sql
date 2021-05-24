@@ -1,6 +1,7 @@
 ﻿
 create database ["QL_NhaThuoc"]
 use ["QL_NhaThuoc"]
+
 create table NhanVien
 (
 	maNV nvarchar(10) not null,
@@ -74,7 +75,7 @@ create table CTHoaDonNhap
 
 create table HoaDonXuat
 (
-	maHD_Xuat nvarchar(10) not null,
+	maHD_Xuat nvarchar(10) not null ,
 	maNV nvarchar(10) not null,
 	maKH nvarchar(10),
 	ngay_xuat datetime,
@@ -86,7 +87,7 @@ create table HoaDonXuat
 
 create table CTHoaDonXuat
 (
-	maHD_Xuat nvarchar(10) not null,
+	maHD_Xuat nvarchar(10) not null ,
 	ma_thuoc nvarchar(10) not null,
 	gia_ban int,
 	SL_ban int,
@@ -95,6 +96,7 @@ create table CTHoaDonXuat
 	constraint FK_CTHoaDonXuat_HoaDonXuat FOREIGN KEY (maHD_Xuat) REFERENCES HoaDonXuat(maHD_Xuat)
 )
 
+<<<<<<< HEAD
 select * from thuoc
 insert into NhanVien values('NV001',N'Nnguyễn Văn A',N'Nam',32,N'1 Trường Chinh',N'ABC@gmail.com','0123456789',N'Nhân Viên',N'abc',N'123')
 insert into KhachHang values('0123456789',N'Nguyễn văn B',N'Nam',20,'0123456789',1)
@@ -108,3 +110,19 @@ insert into HoaDonNhap values('HDN121','NV001',2020/1/1,N'Nhà Cung cấp 1',100
 insert into HoaDonNhap values('HDN451','NV001',2020/1/1,N'Nhà Cung cấp 1',1000000)
 insert into HoaDonNhap values('HDN541','NV001',2020/1/1,N'Nhà Cung cấp 1',1000000)
 insert into HoaDonNhap values('HDN441','NV001',2020/1/1,N'Nhà Cung cấp 1',1000000)
+=======
+drop table CTHoaDonXuat
+drop table HoaDonXuat
+insert into NhanVien values('NV001',N'Nnguyễn Văn A',N'Nam',32,N'1 Trường Chinh',N'ABC@gmail.com','0123456789',N'Nhân Viên',N'abc',N'123')
+insert into KhachHang values('0123456789',N'Nguyễn văn B',N'Nam',20,'0123456789',1)
+
+<<<<<<< HEAD
+select*from HoaDonXuat
+select * from  CTHoaDonXuat
+select * from Thuoc
+select * from KhachHang
+=======
+
+select * from Thuoc
+>>>>>>> c98fb80c62c3ddb36489d5a1b348819f75c45f9f
+>>>>>>> ab3b7af52a998b6f285e3848edfe003a6a9b5dc2

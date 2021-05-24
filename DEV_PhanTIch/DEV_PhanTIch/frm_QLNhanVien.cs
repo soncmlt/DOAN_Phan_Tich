@@ -7,6 +7,7 @@ namespace DEV_PhanTIch
     public partial class frm_QLNhanVien : DevExpress.XtraEditors.XtraForm
     {
         XuLiNhanVien nv = new XuLiNhanVien();
+        DataThuocDataContext data = new DataThuocDataContext();
         public frm_QLNhanVien()
         {
             InitializeComponent();
@@ -70,6 +71,11 @@ namespace DEV_PhanTIch
                 txtEmail.Text = gridDSNV.CurrentRow.Cells[5].Value.ToString();
                 txtSDT.Text = gridDSNV.CurrentRow.Cells[6].Value.ToString();
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            gridDSNV.DataSource = data.NhanViens.Where(c => c.ho_ten.Contains(textBox1.Text));
         }
     }
 }
